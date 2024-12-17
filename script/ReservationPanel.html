@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      let rangeInterval;
+
+      function updateSelectedRange() {
+        google.script.run.withSuccessHandler(function(range) {
+          document.getElementById("selectedRange").innerText = range || "None selected";
+        }).getActiveRange();
+      }
+
+      function startPolling() {
+        rangeInterval = setInterval(updateSelectedRange, 1000);
+      }
+
+      function stopPolling() {
+        clearInterval(rangeInterval);
+      }
+
+      function confirmUsage() {
+        const color = document.getElementById("color").value;
+        const name = document.getElementById("name").value;
+        const resourceCount = document.getElementById("resourceCount").value;
+        const comment = document.getElementById("comment").value;
+
+        if (!name) {
+          alert("Please enter your name.");
+          return;
+        }
+        
+        google.script.run.withSuccessHandler(() => {
+          google.script.host.close();
+        }).confirmUsage(color, name, resourceCount, comment);
+      }
+
+      window.onload = startPolling;
+      window.onbeforeunload = stopPolling;
+    </script>
+  </head>
+  <body>
+    <h3>Resource Reservation</h3>
+    <p><strong>Selected Range:</strong> <span id="selectedRange">None selected</span></p>
+
+    <label>Color:</label>
+    <input type="color" id="color" value="#ffe599"><br><br>
+
+    <label><strong>Name:</strong></label><br>
+    <input type="text" id="name" placeholder="Enter your name"><br><br>
+
+    <label><strong>Count:</strong></label><br>
+    <input type="number" id="resourceCount" placeholder="Enter number of resources" min="1"><br><br>
+
+    <label><strong>Purpose/Notes:</strong></label><br>
+    <textarea id="comment" rows="3" cols="30" placeholder="Enter purpose"></textarea><br><br>
+
+    <button onclick="confirmUsage()">Confirm Reservation</button>
+  </body>
+</html>
