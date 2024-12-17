@@ -1,5 +1,7 @@
-# SimpleReserver
-A script-enhanced Google Sheets solution for booking & managing shared resource reservations, implemented using `Apps Scripts`
+# General-Purpose Reservation Sheets
+
+This repo adds custom functionality to **Google Sheets** using Apps Scripts, to create a simple resource reservation system. It is designed for booking & managing shared resources such as equipment, conference rooms, or other assets.
+
 
 
 ### Features
@@ -65,7 +67,26 @@ type of time based trigger: (e.g., Week timer > Every Monday)
 ### Demo
 <img width="600" alt="confirm" src="https://github.com/user-attachments/assets/d674d710-6970-45c3-ac39-c0b47bfc3a38" />
 <img width="600" alt="reserved cells" src="https://github.com/user-attachments/assets/825f4038-6727-4477-9322-44fd6745d822" />
-<img width="300" alt="email" src="https://github.com/user-attachments/assets/011cb5da-02ad-4790-a32f-9ba81873cd5e" />
+<img width="400" alt="email" src="https://github.com/user-attachments/assets/011cb5da-02ad-4790-a32f-9ba81873cd5e" />
 
 
+---
+
+### Customization Guide
+Easily Modifiable
+
+| **Category**          | **Details**                                                                                  |
+|------------------------|---------------------------------------------------------------------------------------------|
+| **Field Names**        | - Update sidebar labels and prompts (e.g., "Count", "Purpose", default color) in _`ReservationPanel.html`_  <br> - Replace terms like **"Resource"** with your specific asset name (e.g., "Room", "Equipment") in the script |
+| **Email Content**      | - Modify the **subject line** and **body** in `sendEmailNotification()` to suit your use case  |
+| **Time Slots** | - Adjust the reservation table size (e.g., **B2:H20**) in functions like `clearDailyReservations()` and `resetWeeklyReservations()` |
+
+
+Things to Watch Out For
+
+| **Category**          | **Details**                                                                                  |
+|------------------------|---------------------------------------------------------------------------------------------|
+| **Cell Mappings**      | - Ensure the header row (e.g., **Days of the Week** in row 1) aligns with the script logic.  <br> - Update column and row ranges in functions like `clearDailyReservations()` if your table structure changes |
+| **Email Recipients**   | - The script sends notifications to all users with **edit access**.  <br> - Verify permissions if you need to limit email recipients |
+| **Triggers**           | - Configure timed triggers carefully to avoid conflicts (e.g., overlapping with confirmation UI)  <br> - Check timezone settings: **File > Settings** in Google Sheets to ensure time-based triggers work as expected |
 
