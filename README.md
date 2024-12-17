@@ -65,9 +65,9 @@ type of time based trigger: (e.g., Week timer > Every Monday)
 ---
 
 ### Demo
-<img width="600" alt="confirm" src="https://github.com/user-attachments/assets/d674d710-6970-45c3-ac39-c0b47bfc3a38" />
-<img width="600" alt="reserved cells" src="https://github.com/user-attachments/assets/825f4038-6727-4477-9322-44fd6745d822" />
-<img width="400" alt="email" src="https://github.com/user-attachments/assets/011cb5da-02ad-4790-a32f-9ba81873cd5e" />
+<img width="500" alt="confirm" src="https://github.com/user-attachments/assets/d674d710-6970-45c3-ac39-c0b47bfc3a38" />
+<img width="500" alt="reserved cells" src="https://github.com/user-attachments/assets/825f4038-6727-4477-9322-44fd6745d822" />
+<img width="300" alt="email" src="https://github.com/user-attachments/assets/011cb5da-02ad-4790-a32f-9ba81873cd5e" />
 
 
 ---
