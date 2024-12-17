@@ -1,9 +1,28 @@
+<a name="readme-top"></a>
+
 # General-Purpose Reservation Sheets
 
 This repo adds custom functionality to **Google Sheets** using Apps Scripts, to create a simple resource reservation system. It is designed for booking & managing shared resources such as equipment, conference rooms, or other assets.
 
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#features">Features</a>
+    <li>
+      <a href="#setup">Setup</a>
+    <li>
+      <a href="#usage">Example Usage</a>
+    <li>
+      <a href="#demo">Demo</a>
+    <li>
+      <a href="#guide">Customization Guide</a>
+  <ol>
+</details>
 
 
+<a name="features"></a>
 ### Features
 1. **Interface**: Reserve resources with a name, resource count, and purpose
 2. **Visualization**: Updates reserved cells with reservation info
@@ -14,6 +33,7 @@ This repo adds custom functionality to **Google Sheets** using Apps Scripts, to 
 
 ----
 
+<a name="setup"></a>
 ### Setup
 1. Make a copy of this [Google Sheet](https://docs.google.com/spreadsheets/d/1A1IMIzoHbthuaOqvMi76wRDiE8JQ1SYESW3r6x81rQg/edit?usp=sharing)
 2. Go to Extensions > **Apps Script**
@@ -27,6 +47,7 @@ This repo adds custom functionality to **Google Sheets** using Apps Scripts, to 
 <img width="450" alt="menu" src="https://github.com/user-attachments/assets/0c9b39bd-6884-4684-b29c-fc355da00f4f" />
 
 
+<a name="usage"></a>
 ### Example Usage
 #### 1 - Reserve:
 
@@ -63,7 +84,7 @@ type of time based trigger: (e.g., Week timer > Every Monday)
 5. Click Save. The function will be triggered and run at your preferred time
 
 ---
-
+<a name="demo"></a>
 ### Demo
 <img width="500" alt="confirm" src="https://github.com/user-attachments/assets/d674d710-6970-45c3-ac39-c0b47bfc3a38" />
 <img width="500" alt="reserved cells" src="https://github.com/user-attachments/assets/825f4038-6727-4477-9322-44fd6745d822" />
@@ -71,7 +92,7 @@ type of time based trigger: (e.g., Week timer > Every Monday)
 
 
 ---
-
+<a name="guide"></a>
 ### Customization Guide
 Easily Modifiable
 
@@ -90,3 +111,6 @@ Things to Watch Out For
 | **Email Recipients**   | - The script sends notifications to all users with **edit access**.  <br> - Verify permissions if you need to limit email recipients |
 | **Triggers**           | - Configure timed triggers carefully to avoid conflicts (e.g., overlapping with confirmation UI)  <br> - Check timezone settings: **File > Settings** in Google Sheets to ensure time-based triggers work as expected |
 
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
